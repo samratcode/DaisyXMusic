@@ -15,14 +15,15 @@ from inspect import getfullargspec
 from io import StringIO
 
 import aiofiles
-from pyrogram import filters
 from pyrogram.types import Message
 
-from wbb import app  # don't remove
-from wbb import SUDOERS, USERBOT_PREFIX, app2, arq
-from wbb.core.decorators.misc import exec_time
+from pyrogram import Client, filters
+from pyrogram.errors import UserAlreadyParticipant
+import asyncio
+from DaisyXMusic.config import SUDO_USERS
 
-__MODULE__ = "Userbot"
+
+__MODULE__ = ""
 __HELP__ = """
 .alive - Send Alive Message.
 .py - Execute Python Code.
