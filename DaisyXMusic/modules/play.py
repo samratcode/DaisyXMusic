@@ -451,7 +451,7 @@ async def m_cb(b, cb):
             await cb.answer("Chat is not connected!", show_alert=True)
 
 
-@Client.on_message(command("play") & other_filters)
+@Client.on_message(command("ytt") & other_filters)
 async def play(_, message: Message):
     global que
     global useer
@@ -728,7 +728,7 @@ async def play(_, message: Message):
         return await lel.delete()
 
 
-@Client.on_message(filters.command("ytplay") & filters.group & ~filters.edited)
+@Client.on_message(filters.command("ytp") & filters.group & ~filters.edited)
 async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
