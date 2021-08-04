@@ -451,7 +451,7 @@ async def m_cb(b, cb):
             await cb.answer("Chat is not connected!", show_alert=True)
 
 
-@Client.on_message(command("splay") & other_filters)
+@Client.on_message(command("play") & other_filters)
 async def play(_, message: Message):
     global que
     global useer
@@ -1013,7 +1013,7 @@ async def deezer(client: Client, message_: Message):
     os.remove("final.png")
 
 
-@Client.on_message(filters.command("play") & filters.group & ~filters.edited)
+@Client.on_message(filters.command("splay") & filters.group & ~filters.edited)
 async def jiosaavn(client: Client, message_: Message):
     global que
     if message_.chat.id in DISABLED_GROUPS:
